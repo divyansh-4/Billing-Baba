@@ -192,7 +192,7 @@ export default function Items({ data, setData, change, setChange }) {
                   {selecteditems ? selecteditems.Name : "No Item Selected"}
                 </h1>
                 <button onClick={() => setStockPage(!StockPage)}>
-                  + Adujust Items
+                  + Adjust Items
                 </button>
                 {StockPage && <StockAdjust setClose={setStockPage} />}
               </div>
@@ -374,7 +374,7 @@ export default function Items({ data, setData, change, setChange }) {
                       {selecteditems ? selecteditems.Name : "No Item Selected"}
                     </h1>
                     <button onClick={() => setStockPage(!StockPage)}>
-                      + Adujust Items
+                      + Adjust Items
                     </button>
                     {StockPage && <StockAdjust setClose={setStockPage} />}
                   </div>

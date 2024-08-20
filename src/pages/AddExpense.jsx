@@ -184,7 +184,7 @@ export default function AddExpense({ data, setData, change, setChange }) {
                   name="name"
                   onFocus={() => setInputFocus(true)}
                   onBlur={() => setInputFocus(false)}
-                  placeholder="Expense Catogroy"
+                  placeholder="Expense Category"
                   id=""
                   value={Name ? Name : searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}

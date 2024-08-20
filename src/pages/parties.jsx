@@ -32,7 +32,24 @@ export default function Parties({ data, setData }) {
   //       console.error("Error:", error);
   //     });
   // };
+  const handleDelete = (party) => {
+    console.log("Happening");
+    console.log(party);
+    const updatedData = {
+      ...data,
+      parties: data.parties.filter((i) => i !== party),
+    };
 
+    setData(updatedData);
+    // setChange(!change);
+  };
+
+const handleEdit = (party) => {
+    console.log("Item when edit is clicked",party);
+    localStorage.setItem("party",JSON.stringify(party));
+    console.log(localStorage.getItem("party"));
+    Navigate("/EditParty");
+  };
   const handlePartySelect = (party) => {
     setSelectedParty(party);
   };
@@ -151,9 +168,9 @@ export default function Parties({ data, setData }) {
                       </p>
                       {/* <Dropdown menuItems={["View/Edit", "Delete"]}> */}
                       <Dropdown menuItems={[
-                                { label: "View/Edit"},
-                                { label: "Delete"},
-                              ]} isLabelOnly={true}>
+                                { label: "View/Edit",action: () => handleEdit(party)},
+                                { label: "Delete",action: () => handleDelete(party)},
+                              ]}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 128 512"
@@ -183,10 +200,10 @@ export default function Parties({ data, setData }) {
                         .reduce((acc, obj) => acc + obj.pending, 0)}
                     </p>
                     {/* <Dropdown menuItems={["View/Edit", "Delete"]}> */}
-                    <Dropdown menuItems={[
-                                { label: "View/Edit"},
-                                { label: "Delete"},
-                              ]} isLabelOnly={true}>
+                                        <Dropdown menuItems={[
+                                { label: "View/Edit",action: () => handleEdit(party)},
+                                { label: "Delete",action: () => handleDelete(party)},
+                              ]}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 128 512"

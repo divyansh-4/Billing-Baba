@@ -6,7 +6,7 @@ export default function DelieveryChalan({ data, setData }) {
   return (
     <div id="sale-Order">
       <div className="topbar">
-        <button className="selected">Delievery chalan</button>
+        <button className="selected">Delivery chalan</button>
       </div>
       <div className="service">
         <img src="./assets/delievery.jpg" alt="" />

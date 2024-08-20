@@ -332,7 +332,7 @@ export default function EditItem({
                     <CustomInput
                       inputValue={discount}
                       setInputValue={setDescount}
-                      placeholder={"Descount"}
+                      placeholder={"Discount"}
                     />
                     <select
                       name=""

@@ -163,7 +163,7 @@ export default function QuickBilling({ data, setData, t = true }) {
                   PRICE / UNIT
                 </th>
                 <th className="w-full  py-3  text-center bg-emerald-100 rounded-sm">
-                  DESCOUNT
+                  DISCOUNT
                 </th>
                 <th className="w-full  py-3  text-center bg-emerald-100 rounded-sm">
                   TAX
@@ -216,10 +216,10 @@ export default function QuickBilling({ data, setData, t = true }) {
         </div>
         <div className="b">
           <button>Change Quantity</button>
-          <button>Item Descount</button>
+          <button>Item Discount</button>
           <button>Remove Item</button>
           <button className="unavailable">Bill Item</button>
-          <button className="unavailable">Additionl changes</button>
+          <button className="unavailable">Additional changes</button>
           <button className="unavailable">Bill discount</button>
           <button className="unavailable">Loyal points</button>
           <button className="unavailable">Remarks</button>
@@ -269,7 +269,7 @@ export default function QuickBilling({ data, setData, t = true }) {
             <h2>Sub Total:</h2>
           </div>
           <div className="flex justify-between">
-            <h2>Total Descounts</h2>
+            <h2>Total Discounts</h2>
           </div>
           <div className="flex justify-between">
             <h2>Total Tax</h2>

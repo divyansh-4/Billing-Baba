@@ -14,6 +14,7 @@ import AddPurchase from "./pages/purchase/addPurchase";
 import AddItem from "./pages/addItem";
 import EditItem from "./pages/editItem";
 import AddParties from "./pages/addParties";
+import EditParties from "./pages/editParty";
 import SaleInvoice from "./pages/sales/SaleInvoice";
 import EstimatedQuortation from "./pages/sales/estimatedQuortation";
 import PaymentIn from "./pages/sales/paymentIn";
@@ -62,9 +63,9 @@ function App() {
     }
   }, []);
   const storedItem = localStorage.getItem("item");
-  console.log("Retrieved from localStorage:", storedItem);
+  // console.log("Retrieved from localStorage:", storedItem);
   const item2 = storedItem ? JSON.parse(storedItem) : null;
-  console.log("Parsed item:", item2);
+  // console.log("Parsed item:", item2);
   const [data, setData] = useState(localStorage.getItem("data"));
   const [item, setItem] = useState(item2);
   const [change, setChange] = useState(false);
@@ -211,6 +212,20 @@ function App() {
             element={
               <Home part="parties" data={data} setData={setData}>
                 <AddParties
+                  data={data}
+                  setData={setData}
+                  change={change}
+                  setChange={setChange}
+                />
+              </Home>
+            }
+          />
+          <Route
+            path="/EditParty"
+            exact
+            element={
+              <Home part="parties" data={data} setData={setData}>
+                <EditParties
                   data={data}
                   setData={setData}
                   change={change}
